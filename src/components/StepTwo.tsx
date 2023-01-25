@@ -10,7 +10,7 @@ const StepTwo = ({ onClickNextStep }: TStepTwo) => {
   return (
     <div>
       <FormHeader />
-      <div>
+      <div className="app-text-field">
         <label htmlFor="zipcode">
           <FormattedMessage id="app.body.information.zip.label" />
         </label>

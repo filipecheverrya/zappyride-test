@@ -1,13 +1,177 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #F0F3F5;
+  color: #404040;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+.layout-card {
+  background-color: #fff;
+  border-radius: 16px;
+  max-width: 1050px;
+  width: 100%;
+  margin: 80px auto 180px auto;
+  padding: 54px 0;
+}
+.layout-card header h1 {
+  font-size: 34px;
+  text-align: center;
+  max-width: 542px;
+  margin: 0 auto 24px auto;
+}
+.layout-card header p {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  max-width: 498px;
+  margin: 0 auto;
+}
+.layout-card .pillar-list {
+  list-style-type: none;
+  margin: 55px 0 64px 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.layout-card .pillar-list li {
+  margin-right: 36px;
+}
+.layout-card .pillar-list li:last-child {
+  margin: 0;
+}
+.layout-card .pillar-list img {
+  display: block;
+  margin: 0 auto 16px auto;
+}
+.layout-card .pillar-list p {
+  color: #333333;
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+}
+.btn-primary {
+  text-transform: uppercase;
+  background-color: #0072CE;
+  color: #fff;
+  line-height: 16px;
+  font-size: 18px;
+  padding: 16px 40px;
+  border: none;
+  border-radius: 50px;
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
+}
+.btn-secondary {
+  text-transform: uppercase;
+  background-color: #ffffff;
+  color: #333333;
+  line-height: 16px;
+  font-size: 18px;
+  padding: 16px 40px;
+  border: 1px solid #0072CE;
+  border-radius: 50px;
+  margin: 0 auto;
+  display: block;
+  cursor: pointer;
+}
+.app-header {
+  background-color: #B9BCC0;
+  padding: 14px 0;
+}
+.app-header-block {
+  background-color: #ffffff;
+  height: 73px;
+  width: 100%;
+}
+.app-header h4 {
+  color: #333333;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  text-align: center;
+  margin: 0 0 30px 0;
+}
+.stepper {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.stepper li {
+  background-color: #595959;
+  height: 4px;
+  width: 80px;
+  margin-right: 8px;
+}
+.stepper li:last-child {
+  margin-right: 0;
+}
+.stepper li.active {
+  background-color: #0072CE;
+}
+.app-navigation-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 64px;
+}
+.app-navigation-buttons .btn-primary,
+.app-navigation-buttons .btn-secondary {
+  margin: 0;
+}
+.app-dropdown-field,
+.app-text-field {
+  display: flex;
+  flex-direction: column;
+  max-width: 335px;
+  margin: 48px auto 190px auto;
+}
+.app-dropdown-field small,
+.app-text-field small {
+  color: #707070;
+  font-size: 11px;
+  margin-top: 6px;
+}
+.app-dropdown-field label,
+.app-text-field label {
+  color: #1A1A1A;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+.app-text-field input {
+  border: 1px solid #B9BCC0;
+  border-radius: 4px;
+  min-height: 59px;
+  font-size: 16px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.app-dropdown-field .Dropdown-arrow {
+  top: 25px;
+}
+.app-dropdown-field .Dropdown-control {
+  border-radius: 4px;
+  border-color: #D9D9D6;
+  padding: 20px 52px 20px 10px;
+}
+.app-dropdown-field .Dropdown-menu {
+  margin-top: 5px;
+  border-radius: 5px;
+  border-color: #D9D9D6;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1)
+}
+.app-dropdown-field .Dropdown-option {
+  padding: 20px 10px;
+  color: #1A1A1A;
+}
+.app-dropdown-field .Dropdown-placeholder {
+  opacity: .5;
 }

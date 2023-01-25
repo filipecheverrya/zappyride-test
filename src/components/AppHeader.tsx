@@ -5,11 +5,13 @@ type TAppHeader = {
 
 const AppHeader = ({ step, totalSteps }: TAppHeader) => {
   return (
-    <header>
-      {`Step ${step} of ${totalSteps}`}
+    <header className="app-header">
+      <h4>
+        {`Step ${step} of ${totalSteps}`}
+      </h4>
       <ul className="stepper">
         {Array.apply(null, Array(totalSteps)).map((e, i) =>
-          <li key={i} className={step === (i+1) ? "active" : ""}></li>
+          <li key={i} className={step >= (i+1) ? "active" : ""}></li>
         )}
       </ul>
     </header>

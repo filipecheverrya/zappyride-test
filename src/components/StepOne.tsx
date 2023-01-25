@@ -33,12 +33,14 @@ const StepOne = ({ onClickNextStep }: TStepOne) => {
 
   return (
     <div>
-      <h1>
-        <FormattedMessage id="app.header.title" />
-      </h1>
-      <p>
-        <FormattedMessage id="app.header.subtitle" />
-      </p>
+      <header>
+        <h1>
+          <FormattedMessage id="app.header.title" />
+        </h1>
+        <p>
+          <FormattedMessage id="app.header.subtitle" />
+        </p>
+      </header>
       <ul className="pillar-list">
         {pillars.map((e, i) =>
           <li key={i}>

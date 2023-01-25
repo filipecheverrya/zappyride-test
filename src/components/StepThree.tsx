@@ -8,14 +8,24 @@ type TStepThree = {
 }
 
 const StepThree = ({ onClickNextStep }: TStepThree) => {
+  const options = [
+    { value: 'home-garage', label: 'Home (garage)' },
+    { value: 'small-office', label: 'Small Office' },
+    { value: 'large-office', label: 'Large Office' },
+    { value: 'warehouse', label: 'Warehouse' },
+    { value: 'depot', label: 'Depot' },
+    { value: 'school', label: 'School' },
+    { value: 'apartment-building', label: 'Apartment Building' },
+  ];
+
   return (
     <div>
       <FormHeader />
-      <div>
+      <div className="app-dropdown-field">
         <label htmlFor="buildtype">
           <FormattedMessage id="app.body.information.type.label" />
         </label>
-        <Dropdown options={['one', 'two', 'three']} />
+        <Dropdown options={options} placeholder="Select an option" />
         <small>
           <FormattedMessage id="app.body.information.type.helper" />
         </small>

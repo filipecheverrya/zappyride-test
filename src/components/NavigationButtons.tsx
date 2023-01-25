@@ -7,8 +7,8 @@ type TNavigationButtons = {
 
 const NavigationButtons = ({ onClickNextButton, onClickPrevButton }: TNavigationButtons) => {
   return (
-    <div>
-      <button type="button" className="btn-primary" onClick={onClickPrevButton}>
+    <div className="app-navigation-buttons">
+      <button type="button" className="btn-secondary" onClick={onClickPrevButton}>
         <FormattedMessage id="app.body.prev.button" />
       </button>
       <button type="button" className="btn-primary" onClick={onClickNextButton}>
