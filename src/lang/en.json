@@ -1,0 +1,16 @@
+{
+  "app.header.title": "Going electric starts with understanding your needs",
+  "app.header.subtitle": "We need to understand your requirements so we can recommend the appropriate electric vehicle, charger and identify incentives.",
+  "app.body.pillar.org": "Tell us about your organization",
+  "app.body.pillar.car":"Tell us about your vehicles",
+  "app.body.pillar.save": "See how much you can save",
+  "app.body.button": "Create Your First Vehicle Set",
+  "app.header.information.title": "General Information",
+  "app.header.information.subtitle": "We use this information to calculate fuel costs and applicable incentives",
+  "app.body.information.zip.label": "Zip Code",
+  "app.body.information.zip.helper": "Used to check incentive applicability and fuel prices",
+  "app.body.information.type.label": "Building Type",
+  "app.body.information.type.helper": "Select an option to see definition",
+  "app.body.next.button": "Next",
+  "app.body.prev.button": "Back"
+}
