@@ -67,6 +67,10 @@ code {
   display: block;
   cursor: pointer;
 }
+.btn-primary:disabled {
+  opacity: .65;
+  cursor: default;
+}
 .btn-secondary {
   text-transform: uppercase;
   background-color: #ffffff;
@@ -172,6 +176,6 @@ code {
   padding: 20px 10px;
   color: #1A1A1A;
 }
-.app-dropdown-field .Dropdown-placeholder {
+.app-dropdown-field .Dropdown-placeholder:not(.is-selected) {
   opacity: .5;
 }

@@ -1,13 +1,16 @@
 import { FormattedMessage } from "react-intl";
-import Dropdown from "react-dropdown";
+import Dropdown, { Option as IDropdownOption } from "react-dropdown";
 import NavigationButtons from "./NavigationButtons";
 import FormHeader from "./FormHeader";
+import { useState } from "react";
 
 type TStepThree = {
   onClickNextStep: (n: number) => void;
+  formSubmit: (s: string) => void;
 }
 
-const StepThree = ({ onClickNextStep }: TStepThree) => {
+const StepThree = ({ onClickNextStep, formSubmit }: TStepThree) => {
+  const [disableButton, setDisableButton] = useState<boolean>(true);
   const options = [
     { value: 'home-garage', label: 'Home (garage)' },
     { value: 'small-office', label: 'Small Office' },
@@ -18,6 +21,11 @@ const StepThree = ({ onClickNextStep }: TStepThree) => {
     { value: 'apartment-building', label: 'Apartment Building' },
   ];
 
+  const onChangeDropdown = (event: IDropdownOption) => {
+    setDisableButton(!event.value);
+    formSubmit(event.value);
+  }
+
   return (
     <div>
       <FormHeader />
@@ -25,7 +33,7 @@ const StepThree = ({ onClickNextStep }: TStepThree) => {
         <label htmlFor="buildtype">
           <FormattedMessage id="app.body.information.type.label" />
         </label>
-        <Dropdown options={options} placeholder="Select an option" />
+        <Dropdown options={options} placeholder="Select an option" onChange={onChangeDropdown} />
         <small>
           <FormattedMessage id="app.body.information.type.helper" />
         </small>
@@ -33,6 +41,7 @@ const StepThree = ({ onClickNextStep }: TStepThree) => {
       <NavigationButtons
         onClickNextButton={() => onClickNextStep(1)}
         onClickPrevButton={() => onClickNextStep(2)}
+        disableNextButton={disableButton}
       />
     </div>
   );

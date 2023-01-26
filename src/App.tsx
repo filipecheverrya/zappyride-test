@@ -13,6 +13,8 @@ function App() {
   const navigate = useNavigate();
   const location = useLocation();
   const [step, setStep] = useState<number>(1);
+  const [zipcode, setZipcode] = useState<string>('');
+  const [buildType, setBuildType] = useState<string>('');
   const totalSteps = 3;
 
   useEffect(() => {
@@ -22,6 +24,10 @@ function App() {
   const onChangeStep = (n: number) => {
     setStep(n);
     navigate(`/${n}`);
+    console.log(n, step)
+    if (n === 1 && step === 3) {
+      alert(`Success, you entries are: { zipcode: ${zipcode}, buildType: ${buildType} }`);
+    }
   }
 
   return (
@@ -37,12 +43,18 @@ function App() {
         }/>
         <Route path="/2" element={
           <CardLayout>
-            <StepTwo onClickNextStep={onChangeStep} />
+            <StepTwo
+              onClickNextStep={onChangeStep}
+              formSubmit={(s) => setZipcode(s)}
+            />
           </CardLayout>
         }/>
         <Route path="/3" element={
           <CardLayout>
-            <StepThree onClickNextStep={onChangeStep} />
+            <StepThree
+              onClickNextStep={onChangeStep}
+              formSubmit={(s) => setBuildType(s)}
+            />
           </CardLayout>
         }/>
         <Route path="*" element={<Navigate to="/1" />}/>
